@@ -31,12 +31,16 @@ public class Main extends javax.swing.JFrame implements ActionListener {
             this.add(boton);
         }
         
+        // Boton de borrado de memoria
+        
         btnAC.addActionListener((ActionEvent e) -> {
             
             tfPantalla.setText("");
             Calculo.dropMemoria();
             Calculo.dropOperador();
         });
+        
+        // Operador de suma
         
         btnSum.addActionListener((ActionEvent e) -> {
             
@@ -45,12 +49,16 @@ public class Main extends javax.swing.JFrame implements ActionListener {
             Calculo.setOperador("+");
         });
         
+        // Operador de resta
+        
         btnRest.addActionListener((ActionEvent e) -> {
             
             tfPantalla.setText(Main.tfPantalla.getText() + " - ");
             Calculo.Resultado();
             Calculo.setOperador("-");
         });
+        
+        // Operador de dividir
         
         btnDivide.addActionListener((ActionEvent e) -> {
             
@@ -59,6 +67,8 @@ public class Main extends javax.swing.JFrame implements ActionListener {
             Calculo.setOperador("/");
         });
         
+        // Operador de multiplicar
+        
         btnMultiply.addActionListener((ActionEvent e) -> {
             
             tfPantalla.setText(Main.tfPantalla.getText() + " * ");
@@ -66,10 +76,11 @@ public class Main extends javax.swing.JFrame implements ActionListener {
             Calculo.setOperador("*");
         });
         
+        // Operador de resultado
+        
         btnEqual.addActionListener((ActionEvent e) -> {
             
             Calculo.Resultado();
-            //Calculo.dropOperador();
             tfPantalla.setText(String.valueOf(Calculo.getResultado()));
         });
     }

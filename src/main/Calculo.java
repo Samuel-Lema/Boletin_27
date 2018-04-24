@@ -6,15 +6,21 @@ public class Calculo {
     protected static int memoriaTemp = 0;
     private static String operador = "";
 
+    // Guarda el operador seleccionado
+    
     public static void setOperador(String operador) {
         Calculo.operador = operador;
     }
 
+    // Devuelve el resultado en memoria
+    
     public static int getResultado() {
         
         return memoria;
     }
-
+    
+    // Concatena el calculo segun el operador seleccionado
+    
     public static void Resultado() {
         
         switch(operador) {
@@ -28,10 +34,14 @@ public class Calculo {
         memoriaTemp = 0;
     }
     
+    // Borra el operador de la memoria
+    
     public static void dropOperador() {
         
         operador = "";
     }
+    
+    // Borra el calculo de memoria
     
     public static void dropMemoria() {
         
